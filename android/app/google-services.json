@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "223321777770",
+    "project_id": "yurd-um",
+    "storage_bucket": "yurd-um.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:223321777770:android:f3a6abb98aad5d4573cc13",
+        "android_client_info": {
+          "package_name": "com.example.untitled"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "223321777770-36utblffcegom4k40h6c83avuc500inn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOz8tx3lLhI_FeMlai1MntKlSUkF0bPU4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "223321777770-36utblffcegom4k40h6c83avuc500inn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
