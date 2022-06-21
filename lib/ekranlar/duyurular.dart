@@ -7,7 +7,7 @@ class duyurular extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.amber,
+          backgroundColor: Colors.lightBlueAccent,
           title: Row(
             children: [
               IconButton(

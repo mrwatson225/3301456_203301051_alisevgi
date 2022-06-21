@@ -9,7 +9,7 @@ class kahvaltiMenu extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.amberAccent,
         appBar: AppBar(
-          backgroundColor: Colors.amber,
+          backgroundColor: Colors.lightBlueAccent,
           title: Row(
             children: [
               IconButton(
@@ -43,69 +43,79 @@ class kahvaltiMenu extends StatelessWidget {
           ),
         ),
         body: Center(
-          child: Column(
-            children: [
-              Container(
-                margin: EdgeInsets.only(top: 40, left: 30,right: 30),
-                decoration: BoxDecoration(
-                  border: Border.all(
-                      width: 1.0
-                  ),
-                  color: Colors.blueGrey,
-                  borderRadius: BorderRadius.all(Radius.circular(3.0,
-                  ),
+          child: Container(
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: <Color>[
+                  Colors.yellowAccent,
+                  Colors.amber
 
-                  ),
-
-                ),
-                child: Row(
-
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 15.0),
-                      child: SizedBox(
-                        width: 70,
-                        height: 70,
-                        child: Image.asset('images/patates.jpg'),
+                ],
+                tileMode: TileMode.mirror,
+              ),
+            ),
+            child: Column(
+              children: [
+                Container(
+                  margin: EdgeInsets.only(top: 40, left: 30, right: 30),
+                  decoration: BoxDecoration(
+                    border: Border.all(width: 1.0),
+                    color: Colors.lightBlueAccent,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(
+                        3.0,
                       ),
                     ),
-                    SizedBox(
-                        height: 18,
-                        child: Text("    Patates Kızartması  : 4.00 TL")),
-                  ],
+                  ),
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 15.0),
+                        child: SizedBox(
+                          width: 70,
+                          height: 70,
+                          child: Image.asset('images/patates.jpg'),
+                        ),
+                      ),
+                      SizedBox(
+                          height: 18,
+                          child: Text("    Patates Kızartması  : 4.00 TL")),
+                    ],
+                  ),
                 ),
-              ),
-              Container(
-                margin: EdgeInsets.only(top: 40, left: 30,right: 30),
-                decoration: BoxDecoration(
-                  border: Border.all(
-                      width: 1.0
-                  ),
-                  color: Colors.blueGrey,
-                  borderRadius: BorderRadius.all(Radius.circular(3.0,
-                  ),
-
-                  ),
-
-                ),
-                child: Row(
-
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 15.0,),
-                      child: SizedBox(
-                        width: 70,
-                        height: 70,
-                        child: Image.asset('images/sosis.jpg'),
+                Container(
+                  margin: EdgeInsets.only(top: 40, left: 30, right: 30),
+                  decoration: BoxDecoration(
+                    border: Border.all(width: 1.0),
+                    color: Colors.lightBlueAccent,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(
+                        3.0,
                       ),
                     ),
-                    SizedBox(
-                        height: 18,
-                        child: Text("    Sosis Kızartması  : 4.00 TL")),
-                  ],
+                  ),
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(
+                          left: 15.0,
+                        ),
+                        child: SizedBox(
+                          width: 70,
+                          height: 70,
+                          child: Image.asset('images/sosis.jpg'),
+                        ),
+                      ),
+                      SizedBox(
+                          height: 18,
+                          child: Text("    Sosis Kızartması  : 4.00 TL")),
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

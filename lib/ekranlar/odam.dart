@@ -24,12 +24,12 @@ class odam extends StatelessWidget {
                 child: Row(
                   children: const [
                     Icon(
-                      Icons.volume_up,
+                      Icons.door_back_door_outlined,
                       color: Colors.blueGrey,
                       size: 30.0,
                     ),
                     Text(
-                      " Duyurular",
+                      " Odam",
                       style: TextStyle(
                         color: Colors.blueGrey,
                       ),
@@ -38,6 +38,22 @@ class odam extends StatelessWidget {
                 ),
               ),
             ],
+          ),
+        ),
+        body: Center(
+          child: Container(
+            margin: EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              color: Colors.deepPurpleAccent,
+              border: Border.all(width: 1.0),
+              borderRadius: BorderRadius.all(
+                Radius.circular(
+                  30,
+                ),
+              ),
+            ),
+
+
           ),
         ),
       ),
