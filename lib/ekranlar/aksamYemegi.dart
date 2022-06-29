@@ -67,9 +67,7 @@ class aksamYemegi extends StatelessWidget {
                       color: Colors.lightBlueAccent                   ,
                       borderRadius: BorderRadius.all(Radius.circular(3.0,
                       ),
-
                       ),
-
                     ),
                     child: Row(
 

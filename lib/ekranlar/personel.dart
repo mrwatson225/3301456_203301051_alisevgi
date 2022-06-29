@@ -7,7 +7,15 @@ class personel extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.amber,
+          flexibleSpace: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.centerLeft,
+                end: Alignment.centerRight,
+                colors: <Color>[Colors.yellowAccent, Colors.lightBlueAccent],
+              ),
+            ),
+          ),
           title: Row(
             children: [
               IconButton(
@@ -40,6 +48,11 @@ class personel extends StatelessWidget {
             ],
           ),
         ),
+
+
+
+
+
       ),
     );
   }

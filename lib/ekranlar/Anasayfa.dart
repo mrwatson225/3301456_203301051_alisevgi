@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:untitled/ekranlar/aksamYemegi.dart';
+import 'package:untitled/ekranlar/api.dart';
 import 'package:untitled/ekranlar/duyurular.dart';
 import 'package:untitled/ekranlar/istek.dart';
 import 'package:untitled/ekranlar/kahvaltiMenu.dart';
@@ -12,9 +13,18 @@ class anasayfa extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: ButtonBar(),
       backgroundColor: Colors.amberAccent,
       appBar: AppBar(
-        backgroundColor: Colors.lightBlueAccent,
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.centerLeft,
+              end: Alignment.centerRight,
+              colors: <Color>[Colors.yellowAccent, Colors.lightBlueAccent],
+            ),
+          ),
+        ),
         automaticallyImplyLeading: false,
         title: Row(
           children: [
@@ -72,6 +82,7 @@ class anasayfa extends StatelessWidget {
 
               Container(
                 margin: EdgeInsets.only(left: 30,right: 30,bottom: 70,top: 30),
+
                 child: ListView(
 
                   scrollDirection: Axis.horizontal,
@@ -171,7 +182,7 @@ class anasayfa extends StatelessWidget {
                               ),
                               Container(
                                 margin: EdgeInsets.only(top: 20),
-                                child: Text("Odam",
+                                child: Text("Bilgilerim",
                                     style: TextStyle(
                                         fontSize: 30, color: Colors.white)),
                               ),
@@ -192,10 +203,10 @@ class anasayfa extends StatelessWidget {
                                             odam()));
                                   },
                                   icon: const Icon(
-                                    Icons.door_back_door_outlined,
+                                    Icons.account_box_rounded,
                                     size: 30.0,
                                   ),
-                                  label: const Text("Odam"),
+                                  label: const Text("Bilgilerim"),
                                 ),
                               ),
                               const SizedBox(height: 70),
@@ -317,7 +328,7 @@ class anasayfa extends StatelessWidget {
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                personel()));
+                                                Api()));
                                   },
                                   icon: const Icon(
                                     Icons.account_box_rounded,

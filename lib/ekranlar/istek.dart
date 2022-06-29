@@ -6,8 +6,17 @@ class istek extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        backgroundColor: Colors.yellowAccent,
         appBar: AppBar(
-          backgroundColor: Colors.amber,
+          flexibleSpace: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.centerLeft,
+                end: Alignment.centerRight,
+                colors: <Color>[Colors.yellowAccent, Colors.lightBlueAccent],
+              ),
+            ),
+          ),
           title: Row(
             children: [
               IconButton(

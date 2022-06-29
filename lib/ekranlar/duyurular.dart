@@ -3,11 +3,112 @@ import 'package:flutter/material.dart';
 class duyurular extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    List Listem = [
+
+
+      ListTile(
+          leading: Icon(Icons.notifications_active),
+          shape: RoundedRectangleBorder(
+            side: BorderSide(color: Colors.black, width: 1),
+            borderRadius: BorderRadius.circular(5),
+          ),
+        tileColor: Colors.blueGrey,
+        title: Text("Yurd'um otomasyonuna hoşgeldiniz")),
+      SizedBox(
+        height: 3,
+      ),
+      ListTile(
+          leading: Icon(Icons.notifications_active),
+          shape: RoundedRectangleBorder(
+            side: BorderSide(color: Colors.black, width: 1),
+            borderRadius: BorderRadius.circular(5),
+          ),
+          tileColor: Colors.blueGrey,
+          title: Text("Yurt giriş ve çıkış saatleri giriş güncellenmiştir")),
+      SizedBox(
+        height: 3,
+      ),
+      ListTile(
+          leading: Icon(Icons.notifications_active),
+
+          shape: RoundedRectangleBorder(
+            side: BorderSide(color: Colors.black, width: 1),
+            borderRadius: BorderRadius.circular(5),
+          ),
+          tileColor: Colors.blueGrey,
+          title: Text("Yurt çıkış saati 23:00")),
+      SizedBox(
+        height: 3,
+      ),
+      ListTile(
+          leading: Icon(Icons.notifications_active),
+          shape: RoundedRectangleBorder(
+            side: BorderSide(color: Colors.black, width: 1),
+            borderRadius: BorderRadius.circular(5),
+          ),
+          tileColor: Colors.blueGrey,
+          title: Text("Yurt giriş saati 06.00")),
+      SizedBox(
+        height: 3,
+      ),
+      ListTile(
+          leading: Icon(Icons.notifications_active),
+          shape: RoundedRectangleBorder(
+            side: BorderSide(color: Colors.black, width: 1),
+            borderRadius: BorderRadius.circular(5),
+          ),          tileColor: Colors.blueGrey,
+          title: Text("Yurt içinde sigara yasağına dikkat edelim")),
+      SizedBox(
+        height: 3,
+      ),
+
+      ListTile(
+          leading: Icon(Icons.notifications_active),
+          shape: RoundedRectangleBorder(
+            side: BorderSide(color: Colors.black, width: 1),
+            borderRadius: BorderRadius.circular(5),
+          ),
+          tileColor: Colors.blueGrey,
+          title: Text("Çamaşırhane 19.00 dan sonra kapanacaktır")),
+      SizedBox(
+        height: 3,
+      ),
+
+      ListTile(
+          leading: Icon(Icons.notifications_active),
+          shape: RoundedRectangleBorder(
+            side: BorderSide(color: Colors.black, width: 1),
+            borderRadius: BorderRadius.circular(5),
+          ),
+          tileColor: Colors.blueGrey,
+          title: Text("Evine dönecek öğrencilerimizin gitmeden önce izin alması gerekmektedir")),
+      SizedBox(
+        height: 3,
+      ),
+      ListTile(
+          leading: Icon(Icons.notifications_active),
+          shape: RoundedRectangleBorder(
+            side: BorderSide(color: Colors.black, width: 1),
+            borderRadius: BorderRadius.circular(5),
+          ),
+          tileColor: Colors.blueGrey,
+          title: Text("23.00'dan sonra dışarıdan yemek sipariş etmek yasaktır")),
+    ];
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        backgroundColor: Colors.yellowAccent,
         appBar: AppBar(
-          backgroundColor: Colors.lightBlueAccent,
+          flexibleSpace: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.centerLeft,
+                end: Alignment.centerRight,
+                colors: <Color>[Colors.yellowAccent, Colors.lightBlueAccent],
+              ),
+            ),
+          ),
           title: Row(
             children: [
               IconButton(
@@ -39,6 +140,14 @@ class duyurular extends StatelessWidget {
               ),
             ],
           ),
+        ),
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: ListView.builder(
+              itemCount: Listem.length,
+              itemBuilder: (context, index) {
+                return Listem[index];
+              }),
         ),
       ),
     );

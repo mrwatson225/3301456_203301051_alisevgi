@@ -7,9 +7,17 @@ class kahvaltiMenu extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.amberAccent,
+        backgroundColor: Colors.yellowAccent,
         appBar: AppBar(
-          backgroundColor: Colors.lightBlueAccent,
+          flexibleSpace: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.centerLeft,
+                end: Alignment.centerRight,
+                colors: <Color>[Colors.yellowAccent, Colors.lightBlueAccent],
+              ),
+            ),
+          ),
           title: Row(
             children: [
               IconButton(

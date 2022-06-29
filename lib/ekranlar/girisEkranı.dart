@@ -58,10 +58,11 @@ class _govdeState extends State<govde> {
               gradient: LinearGradient(
                 begin: Alignment.centerLeft,
                 end: Alignment.centerRight,
-                colors: <Color>[Colors.yellowAccent, Colors.lightBlueAccent],
+                colors: <Color>[Colors.yellowAccent,Colors.greenAccent, Colors.lightBlueAccent],
               ),
             ),
-          )),
+          ),
+      ),
       body: SingleChildScrollView(
         child: Center(
           child: Container(
@@ -69,7 +70,7 @@ class _govdeState extends State<govde> {
               gradient: LinearGradient(
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
-                colors: <Color>[Colors.yellowAccent, Colors.amber],
+                colors: <Color>[Colors.yellowAccent, Colors.amber,Colors.deepOrange],
               ),
             ),
             width: MediaQuery.of(context).size.width,
@@ -94,6 +95,7 @@ class _govdeState extends State<govde> {
                 Padding(
                   padding: const EdgeInsets.only(left: 50, right: 50),
                   child: TextFormField(
+                    obscureText: true,
                     controller: sifre,
                     decoration: InputDecoration(labelText: "Şifre"),
                   ),
@@ -120,9 +122,10 @@ class _govdeState extends State<govde> {
                               (error, stackTrace) => showDialog<String>(
                                 context: context,
                                 builder: (BuildContext context) => AlertDialog(
-                                  title: const Text('Kayıt Tamamlandı'),
+                                  backgroundColor: Colors.yellowAccent,
+                                  title: const Text('Giriş yapılamadı'),
                                   content: const Text(
-                                      'Giriş ekranına dönüp giriş yapabilirsiniz'),
+                                      'Email veya şifre yanlış lütfen tekrar deneyiniz'),
                                   actions: <Widget>[
                                     TextButton(
                                         onPressed: () {
@@ -132,7 +135,7 @@ class _govdeState extends State<govde> {
                                                   builder: (context) =>
                                                       girisEkrani()));
                                         },
-                                        child: Text('Giriş Ekranı')),
+                                        child: Text('Tekrar dene')),
                                   ],
                                 ),
                               ),

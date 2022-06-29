@@ -16,7 +16,15 @@ class KayitOl extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.amberAccent,
       appBar: AppBar(
-        backgroundColor: Colors.amber,
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.centerLeft,
+              end: Alignment.centerRight,
+              colors: <Color>[Colors.yellowAccent, Colors.lightBlueAccent],
+            ),
+          ),
+        ),
         automaticallyImplyLeading: false,
         title: Row(
           children: [
@@ -43,6 +51,15 @@ class KayitOl extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: <Color>[Colors.yellowAccent, Colors.amber],
+            ),
+          ),
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
           child: Padding(
             padding: const EdgeInsets.only(top: 120, right: 30, left: 30),
             child: Column(
@@ -63,22 +80,18 @@ class KayitOl extends StatelessWidget {
                   controller: sifre,
                   decoration: InputDecoration(labelText: "Şifrenizi girin"),
                 ),
-                TextFormField(
-                  decoration: InputDecoration(labelText: "Şifreyi onaylayın"),
-                ),
                 Padding(
                   padding: const EdgeInsets.only(top: 30.0),
                   child: FloatingActionButton.extended(
                       label: Text(" Kaydı tamamla "),
                       backgroundColor: Colors.blueGrey,
                       onPressed: () {
-                        _fire
-                            .kayitEt(email.text, sifre.text, tckn.text,
-                                adivesoyadi.text)
+                        _fire.kayitEt(email.text, sifre.text, tckn.text, adivesoyadi.text)
                             .then(
                               (value) => showDialog<String>(
                                 context: context,
                                 builder: (BuildContext context) => AlertDialog(
+                                  backgroundColor: Colors.yellowAccent,
                                   title: const Text('Kayıt Tamamlandı'),
                                   content: const Text(
                                       'Giriş ekranına dönüp giriş yapabilirsiniz'),
